@@ -4,64 +4,113 @@ const STORAGE_KEY = "JPPRACTICE_UNKNOWN_COUNTS";
 // 以 row/col 方式描述 50音表（含 wi / we），空格用 null
 const GRID = [
   {
-    rowLabel: { jp: "あ段", rp: "a" }, cells: [
-      { rp: "a", h: "あ", k: "ア" }, { rp: "i", h: "い", k: "イ" }, { rp: "u", h: "う", k: "ウ" }, { rp: "e", h: "え", k: "エ" }, { rp: "o", h: "お", k: "オ" },
-    ]
+    rowLabel: { jp: "あ段", rp: "a" },
+    cells: [
+      { rp: "a", h: "あ", k: "ア" },
+      { rp: "i", h: "い", k: "イ" },
+      { rp: "u", h: "う", k: "ウ" },
+      { rp: "e", h: "え", k: "エ" },
+      { rp: "o", h: "お", k: "オ" },
+    ],
   },
   {
-    rowLabel: { jp: "か行", rp: "k" }, cells: [
-      { rp: "ka", h: "か", k: "カ" }, { rp: "ki", h: "き", k: "キ" }, { rp: "ku", h: "く", k: "ク" }, { rp: "ke", h: "け", k: "ケ" }, { rp: "ko", h: "こ", k: "コ" },
-    ]
+    rowLabel: { jp: "か行", rp: "k" },
+    cells: [
+      { rp: "ka", h: "か", k: "カ" },
+      { rp: "ki", h: "き", k: "キ" },
+      { rp: "ku", h: "く", k: "ク" },
+      { rp: "ke", h: "け", k: "ケ" },
+      { rp: "ko", h: "こ", k: "コ" },
+    ],
   },
   {
-    rowLabel: { jp: "さ行", rp: "s" }, cells: [
-      { rp: "sa", h: "さ", k: "サ" }, { rp: "shi", h: "し", k: "シ" }, { rp: "su", h: "す", k: "ス" }, { rp: "se", h: "せ", k: "セ" }, { rp: "so", h: "そ", k: "ソ" },
-    ]
+    rowLabel: { jp: "さ行", rp: "s" },
+    cells: [
+      { rp: "sa", h: "さ", k: "サ" },
+      { rp: "shi", h: "し", k: "シ" },
+      { rp: "su", h: "す", k: "ス" },
+      { rp: "se", h: "せ", k: "セ" },
+      { rp: "so", h: "そ", k: "ソ" },
+    ],
   },
   {
-    rowLabel: { jp: "た行", rp: "t" }, cells: [
-      { rp: "ta", h: "た", k: "タ" }, { rp: "chi", h: "ち", k: "チ" }, { rp: "tsu", h: "つ", k: "ツ" }, { rp: "te", h: "て", k: "テ" }, { rp: "to", h: "と", k: "ト" },
-    ]
+    rowLabel: { jp: "た行", rp: "t" },
+    cells: [
+      { rp: "ta", h: "た", k: "タ" },
+      { rp: "chi", h: "ち", k: "チ" },
+      { rp: "tsu", h: "つ", k: "ツ" },
+      { rp: "te", h: "て", k: "テ" },
+      { rp: "to", h: "と", k: "ト" },
+    ],
   },
   {
-    rowLabel: { jp: "な行", rp: "n" }, cells: [
-      { rp: "na", h: "な", k: "ナ" }, { rp: "ni", h: "に", k: "ニ" }, { rp: "nu", h: "ぬ", k: "ヌ" }, { rp: "ne", h: "ね", k: "ネ" }, { rp: "no", h: "の", k: "ノ" },
-    ]
+    rowLabel: { jp: "な行", rp: "n" },
+    cells: [
+      { rp: "na", h: "な", k: "ナ" },
+      { rp: "ni", h: "に", k: "ニ" },
+      { rp: "nu", h: "ぬ", k: "ヌ" },
+      { rp: "ne", h: "ね", k: "ネ" },
+      { rp: "no", h: "の", k: "ノ" },
+    ],
   },
   {
-    rowLabel: { jp: "は行", rp: "h" }, cells: [
-      { rp: "ha", h: "は", k: "ハ" }, { rp: "hi", h: "ひ", k: "ヒ" }, { rp: "fu", h: "ふ", k: "フ" }, { rp: "he", h: "へ", k: "ヘ" }, { rp: "ho", h: "ほ", k: "ホ" },
-    ]
+    rowLabel: { jp: "は行", rp: "h" },
+    cells: [
+      { rp: "ha", h: "は", k: "ハ" },
+      { rp: "hi", h: "ひ", k: "ヒ" },
+      { rp: "fu", h: "ふ", k: "フ" },
+      { rp: "he", h: "へ", k: "ヘ" },
+      { rp: "ho", h: "ほ", k: "ホ" },
+    ],
   },
   {
-    rowLabel: { jp: "ま行", rp: "m" }, cells: [
-      { rp: "ma", h: "ま", k: "マ" }, { rp: "mi", h: "み", k: "ミ" }, { rp: "mu", h: "む", k: "ム" }, { rp: "me", h: "め", k: "メ" }, { rp: "mo", h: "も", k: "モ" },
-    ]
+    rowLabel: { jp: "ま行", rp: "m" },
+    cells: [
+      { rp: "ma", h: "ま", k: "マ" },
+      { rp: "mi", h: "み", k: "ミ" },
+      { rp: "mu", h: "む", k: "ム" },
+      { rp: "me", h: "め", k: "メ" },
+      { rp: "mo", h: "も", k: "モ" },
+    ],
   },
   {
-    rowLabel: { jp: "や行", rp: "y" }, cells: [
-      { rp: "ya", h: "や", k: "ヤ" }, null, { rp: "yu", h: "ゆ", k: "ユ" }, null, { rp: "yo", h: "よ", k: "ヨ" },
-    ]
+    rowLabel: { jp: "や行", rp: "y" },
+    cells: [
+      { rp: "ya", h: "や", k: "ヤ" },
+      null,
+      { rp: "yu", h: "ゆ", k: "ユ" },
+      null,
+      { rp: "yo", h: "よ", k: "ヨ" },
+    ],
   },
   {
-    rowLabel: { jp: "ら行", rp: "r" }, cells: [
-      { rp: "ra", h: "ら", k: "ラ" }, { rp: "ri", h: "り", k: "リ" }, { rp: "ru", h: "る", k: "ル" }, { rp: "re", h: "れ", k: "レ" }, { rp: "ro", h: "ろ", k: "ロ" },
-    ]
+    rowLabel: { jp: "ら行", rp: "r" },
+    cells: [
+      { rp: "ra", h: "ら", k: "ラ" },
+      { rp: "ri", h: "り", k: "リ" },
+      { rp: "ru", h: "る", k: "ル" },
+      { rp: "re", h: "れ", k: "レ" },
+      { rp: "ro", h: "ろ", k: "ロ" },
+    ],
   },
   {
-    rowLabel: { jp: "わ行", rp: "w" }, cells: [
-      { rp: "wa", h: "わ", k: "ワ" }, { rp: "wi", h: "ゐ", k: "ヰ" }, null, { rp: "we", h: "ゑ", k: "ヱ" }, { rp: "wo", h: "を", k: "ヲ" },
-    ]
+    rowLabel: { jp: "わ行", rp: "w" },
+    cells: [
+      { rp: "wa", h: "わ", k: "ワ" },
+      { rp: "wi", h: "ゐ", k: "ヰ" },
+      null,
+      { rp: "we", h: "ゑ", k: "ヱ" },
+      { rp: "wo", h: "を", k: "ヲ" },
+    ],
   },
   {
-    rowLabel: { jp: "ん", rp: "n" }, cells: [
-      { rp: "n", h: "ん", k: "ン" }, null, null, null, null
-    ]
+    rowLabel: { jp: "ん", rp: "n" },
+    cells: [{ rp: "n", h: "ん", k: "ン" }, null, null, null, null],
   },
 ];
 
 // 取出所有可用音節（不含 null）
-const ALL_ITEMS = GRID.flatMap(row => row.cells.filter(Boolean));
+const ALL_ITEMS = GRID.flatMap((row) => row.cells.filter(Boolean));
 
 // ====== Utils ======
 function shuffle(arr) {
@@ -78,19 +127,27 @@ function pickRandom(arr) {
 }
 
 function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, m => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
-  }[m]));
+  return String(s).replace(
+    /[&<>"']/g,
+    (m) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[m],
+  );
 }
 
 // ====== State ======
 const state = {
-  selected: new Set(ALL_ITEMS.map(x => x.rp)), // 預設全選音節
+  selected: new Set(ALL_ITEMS.map((x) => x.rp)), // 預設全選音節
   includeHira: true,
   includeKata: true,
 
   // quiz
-  quizList: [],        // [{rp,h,k, script:'h'|'k'}...]
+  quizList: [], // [{rp,h,k, script:'h'|'k'}...]
   quizIndex: 0,
   revealRomaji: false,
   unknownCounts: new Map(), // rp -> count
@@ -157,18 +214,25 @@ function renderTable() {
         continue;
       }
       const checked = state.selected.has(cell.rp) ? "checked" : "";
-      const kanaText = (showH && showK)
-        ? `${cell.h} / ${cell.k}`
-        : (showH ? cell.h : (showK ? cell.k : "—"));
+      const kanaText =
+        showH && showK
+          ? `${cell.h} / ${cell.k}`
+          : showH
+            ? cell.h
+            : showK
+              ? cell.k
+              : "—";
 
       html += `
           <td>
 <label>
+<div class="cellAndPickContainer">
             <input class="pick" type="checkbox" data-rp="${escapeHtml(cell.rp)}" ${checked} aria-label="選擇 ${escapeHtml(cell.rp)}"/>
             <div class="cell">
               <div class="kana">${escapeHtml(kanaText)}</div>
               <div class="romaji">${escapeHtml(cell.rp)}</div>
             </div>
+</div>
 </label
           </td>
         `;
@@ -180,7 +244,7 @@ function renderTable() {
   tableWrap.innerHTML = html;
 
   // 綁定 cell checkbox
-  tableWrap.querySelectorAll('input.pick').forEach(cb => {
+  tableWrap.querySelectorAll("input.pick").forEach((cb) => {
     cb.addEventListener("change", (e) => {
       const rp = e.target.getAttribute("data-rp");
       if (e.target.checked) state.selected.add(rp);
@@ -197,14 +261,19 @@ function renderTable() {
 function syncToggleAll() {
   // 若全部音節都選了 => toggleAll 勾上；有任何沒選 => 不勾
   const allCount = ALL_ITEMS.length;
-  toggleAll.checked = (state.selected.size === allCount);
+  toggleAll.checked = state.selected.size === allCount;
 }
 
 function updateStats() {
   statsText.textContent = `已選音節：${state.selected.size} / ${ALL_ITEMS.length}`;
-  const scriptLabel = state.includeHira && state.includeKata
-    ? "平假名＋片假名（每題隨機）"
-    : (state.includeHira ? "只出平假名" : (state.includeKata ? "只出片假名" : "（未選擇腳本）"));
+  const scriptLabel =
+    state.includeHira && state.includeKata
+      ? "平假名＋片假名（每題隨機）"
+      : state.includeHira
+        ? "只出平假名"
+        : state.includeKata
+          ? "只出片假名"
+          : "（未選擇腳本）";
   scriptText.textContent = `目前題目腳本：${scriptLabel}`;
 }
 
@@ -214,7 +283,7 @@ function buildQuizList(n) {
   // 1) 先把 selected 全部打散
   // 2) 若 n <= selectedCount => 取前 n 個（無重複）
   // 3) 若 n > selectedCount => 先放全部，再隨機補到 n（允許重複）
-  const pool = ALL_ITEMS.filter(x => state.selected.has(x.rp));
+  const pool = ALL_ITEMS.filter((x) => state.selected.has(x.rp));
   const selectedCount = pool.length;
   const shuffled = shuffle(pool);
 
@@ -234,7 +303,7 @@ function buildQuizList(n) {
   if (state.includeHira) scripts.push("h");
   if (state.includeKata) scripts.push("k");
 
-  return list.map(item => ({
+  return list.map((item) => ({
     ...item,
     script: scripts.length === 1 ? scripts[0] : pickRandom(scripts),
   }));
@@ -264,28 +333,32 @@ function currentQ() {
 function renderQuiz() {
   const q = currentQ();
   if (!q) return;
+  const isPing = q.script === "h";
 
-  const kana = (q.script === "h") ? q.h : q.k;
+  const kana = isPing ? q.h : q.k;
   quizKana.textContent = kana;
   progressText.textContent = `${state.quizIndex + 1} / ${state.quizList.length}`;
 
   if (state.revealRomaji) {
-    quizRomaji.textContent = q.rp;
+    quizRomaji.textContent = `${q.rp} ${isPing ? "  (平)" : " (片)"}`;
     quizRomaji.classList.add("show");
     quizTip.textContent = "再按「下一步」進入下一題";
-    nextBtn.textContent = (state.quizIndex === state.quizList.length - 1) ? "結束" : "下一步";
+    nextBtn.textContent =
+      state.quizIndex === state.quizList.length - 1 ? "結束" : "下一步";
   } else {
-    quizRomaji.textContent = q.rp;
-    quizRomaji.classList.remove("show");
+    quizRomaji.textContent = "";
+    // quizRomaji.classList.remove("show");
     quizTip.textContent = "按「下一步」顯示羅馬拼音";
     nextBtn.textContent = "下一步";
   }
 }
 
-
 function checkArrayObjects(arr, keys = []) {
-  return arr.every(obj =>
-    keys.every(key => obj.hasOwnProperty(key) && obj[key] !== undefined && obj[key] !== null)
+  return arr.every((obj) =>
+    keys.every(
+      (key) =>
+        obj.hasOwnProperty(key) && obj[key] !== undefined && obj[key] !== null,
+    ),
   );
 }
 
@@ -293,12 +366,17 @@ let oldRecord = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 
 function finishQuiz(isUpdateRecordData = true) {
   // 顯示結果到首頁底部
-  const entries = isUpdateRecordData ? Array.from(state.unknownCounts.entries())
-    .map(([rp, count]) => {
-      const item = ALL_ITEMS.find(x => x.rp === rp);
-      return { rp, count, h: item?.h, k: item?.k };
-    })
-    .sort((a, b) => b.count - a.count || a.rp.localeCompare(b.rp)) : oldRecord;
+  let entries = isUpdateRecordData
+    ? Array.from(state.unknownCounts.entries())
+        .map(([rp, count]) => {
+          const item = ALL_ITEMS.find((x) => x.rp === rp);
+          return { rp, count, h: item?.h, k: item?.k };
+        })
+        .sort((a, b) => b.count - a.count || a.rp.localeCompare(b.rp))
+    : oldRecord;
+
+  // 再依平假名排序一次（方便閱讀）
+  entries = entries.sort((a, b) => a.h.localeCompare(b.h, "ja"));
 
   if (entries.length === 0) {
     resultBox.style.display = "block";
@@ -307,13 +385,17 @@ function finishQuiz(isUpdateRecordData = true) {
   } else {
     resultBox.style.display = "block";
     resultHint.textContent = `你按下「我不清楚」的音節如下（顯示：平 / 片 / romaji）：`;
-    resultChips.innerHTML = entries.map(e => `
+    resultChips.innerHTML = entries
+      .map(
+        (e) => `
         <div class="chip" title="${escapeHtml(e.rp)}">
           <span>${escapeHtml(e.h)} / ${escapeHtml(e.k)}</span>
           <span class="mini">${escapeHtml(e.rp)}</span>
           <span class="count">${e.count}</span>
         </div>
-      `).join("");
+      `,
+      )
+      .join("");
   }
 
   if (isUpdateRecordData) {
@@ -328,7 +410,7 @@ function finishQuiz(isUpdateRecordData = true) {
 
 function checkOldRecord() {
   if (oldRecord.length > 0) {
-    if (!checkArrayObjects(oldRecord, ['rp', 'count', 'h', 'k'])) {
+    if (!checkArrayObjects(oldRecord, ["rp", "count", "h", "k"])) {
       localStorage.removeItem(STORAGE_KEY);
       oldRecord.splice(0, oldRecord.length);
     } else {
@@ -350,7 +432,7 @@ toggleKata.addEventListener("change", () => {
 
 toggleAll.addEventListener("change", () => {
   if (toggleAll.checked) {
-    state.selected = new Set(ALL_ITEMS.map(x => x.rp));
+    state.selected = new Set(ALL_ITEMS.map((x) => x.rp));
   } else {
     state.selected = new Set();
   }
